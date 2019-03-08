@@ -5,6 +5,7 @@ Also places the module name in important areas.
 
 Files included:
 
+```sh
 ├── .eslintignore
 ├── .eslintrc
 ├── .gitignore
@@ -15,6 +16,7 @@ Files included:
 ├── jest.config.json
 ├── package.json
 └── tsconfig.json
+```
 
 ## Usage
 
