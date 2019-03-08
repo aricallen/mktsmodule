@@ -1,0 +1,25 @@
+{
+  "name": "{{scope}}{{moduleName}}",
+  "version": "0.1.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "yarn build && node dist/index.js",
+    "dev": "tsc -w",
+    "build": "tsc",
+    "test": "jest",
+    "test:w": "jest --watch"
+  },
+  "devDependencies": {},
+  "dependencies": {},
+  "engines": {
+    "node": ">=10.4.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn build"
+    }
+  },
+  "author": "{{scope}}",
+  "license": "MIT"
+}
