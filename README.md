@@ -19,7 +19,7 @@ Files included:
 ## Usage
 
 ```sh
-yarn global add @<scope>/mktsmodule
+yarn global add @aricallen/mktsmodule
 cd <path/to/parent/dir>
 mktsmodule --name=<module-name> [--scope=<scope>]
 ```
