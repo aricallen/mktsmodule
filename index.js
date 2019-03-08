@@ -24,7 +24,7 @@ if (args.name === undefined) {
 const moduleName = changeCase.paramCase(args.name);
 const moduleNamePascal = changeCase.pascalCase(moduleName);
 const moduleDir = path.join(process.cwd(), moduleName);
-const scope = args.scope || moduleName;
+const { scope } = args;
 
 // create module dir
 if (fs.existsSync(moduleDir) === false) {
@@ -38,9 +38,9 @@ if (fs.existsSync(path.join(moduleDir, '.vscode')) === false) {
 for (const templateFilePath of templates) {
   const content = fs.readFileSync(templateFilePath, { encoding: 'utf8' });
   const scrubbed = content
-    .replace('{{scope}}', scope !== undefined ? `@${scope.replace('@', '')}/` : '')
-    .replace('{{moduleName}}', moduleName)
-    .replace('{{moduleNamePascal}}', moduleNamePascal);
+    .replace(/{{scope}}/g, scope !== '' ? `@${scope.replace('@', '')}/` : '')
+    .replace(/{{moduleName}}/g, moduleName)
+    .replace(/{{moduleNamePascal}}/g, moduleNamePascal);
   const relativeDest = templateFilePath
     .replace(__dirname, '')
     .replace(`/${templateDir}/`, '')
