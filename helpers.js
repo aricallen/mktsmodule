@@ -1,4 +1,3 @@
-const args = require('minimist')(process.argv);
 const { dependencies, devDependencies } = require('./deps.js');
 
 const getDependencyStr = () => {

@@ -38,7 +38,7 @@ if (fs.existsSync(path.join(moduleDir, '.vscode')) === false) {
 for (const templateFilePath of templates) {
   const content = fs.readFileSync(templateFilePath, { encoding: 'utf8' });
   const scrubbed = content
-    .replace(/{{scope}}/g, scope !== '' ? `@${scope.replace('@', '')}/` : '')
+    .replace(/{{scope}}/g, scope ? `@${scope.replace('@', '')}/` : '')
     .replace(/{{moduleName}}/g, moduleName)
     .replace(/{{moduleNamePascal}}/g, moduleNamePascal);
   const relativeDest = templateFilePath
