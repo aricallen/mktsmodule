@@ -1,21 +1,25 @@
 # mktsmodule
 
-Setup scaffolding for a npm or yarn module with some base rules/settings I've found useful.
-Also places the module name in important areas (scope currently not supported).
+Setup scaffolding for a node module with some base rules/settings I've found useful.
+Also places the module name in important areas.
 
-Files include:
+Files included:
 
-* .vscode/launch.json
-* .eslintrc.json
-* .gitignore
-* LICENSE
-* package.json
-* README.md
+├── .eslintignore
+├── .eslintrc
+├── .gitignore
+├── .vscode
+│   └── launch.json
+├── LICENSE
+├── README.md
+├── jest.config.json
+├── package.json
+└── tsconfig.json
 
 ## Usage
 
 ```sh
 yarn global add @<scope>/mktsmodule
 cd <path/to/parent/dir>
-mkdir <module-name>
+mktsmodule --name=<module-name> [--scope=<scope>]
 ```
