@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "esnext",
     "module": "commonjs",
     "lib": ["es2015", "esnext"],
     "importHelpers": true,
@@ -8,12 +8,12 @@
     "declaration": true,
     "declarationMap": true,
     "outDir": "./dist",
-    "rootDir": "./src",
+    "rootDir": "./lib",
     "downlevelIteration": true,
     "strict": true,
     "esModuleInterop": true,
     "inlineSourceMap": true
   },
-  "include": ["src/**/*"],
+  "include": ["lib/**/*"],
   "exclude": ["node_modules"]
 }
